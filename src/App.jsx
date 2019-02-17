@@ -5,6 +5,10 @@ import Header from "./components/Header/Header";
 import ExerciseContainer from "./components/Exercises/ExercisesContainer";
 
 class App extends Component {
+  componentDidMount() {
+    document.title = "Stronglify";
+  }
+
   render() {
     return (
       <div className="app">
