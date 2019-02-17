@@ -14,17 +14,18 @@ class ExercisesList extends Component {
     const exercisesPairs = toPairs(exercises);
 
     return (
-      <Card className="exercises__card" header={<h2>Day 2</h2>}>
+      <Card className="exercises__card" header={<h2>Day 1</h2>}>
         <ul>
-          {exercisesPairs.length &&
-            exercisesPairs.map(([key, value]) => (
-              <ExerciseItem
-                key={key}
-                exercise={value}
-                exerciseId={key}
-                toggleCheckbox={toggleCheckbox}
-              />
-            ))}
+          {exercisesPairs.length
+            ? exercisesPairs.map(([key, value]) => (
+                <ExerciseItem
+                  key={key}
+                  exercise={value}
+                  exerciseId={key}
+                  toggleCheckbox={toggleCheckbox}
+                />
+              ))
+            : "no data :)"}
         </ul>
       </Card>
     );
